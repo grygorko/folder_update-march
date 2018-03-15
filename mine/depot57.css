@@ -1,0 +1,14 @@
+body {
+  color: yellow;
+  background-color: grey;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.play {
+   transition: all .8s ease-in-out;
+ }
+
+  .play:hover {
+    transform: scale(1.2);
+   }

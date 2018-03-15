@@ -1,0 +1,63 @@
+We'll discuss the most fun methods first. With animation and effect-based jQuery, you can take selected elements and make cool things happen to them visually, like making elements:
+
+appear once a button is clicked.
+appear slowly on a page.
+slide up or down a page.
+perform your own custom animations.
+.show()  : displays the selected element(s).
+.hide()  : hides the selected element(s).
+.toggle()  : displays or hides element(s) depending on the element's current state.
+.fadeIn()  : fades in element(s).
+.fadeOut()  : fades out element(s).
+.fadeTo()  : fade element(s) to a certain opacity.
+.slideUp()  : hide element(s) with a sliding up motion.
+.slideDown()  : hide element(s) with a sliding down motion.
+.slideToggle()  : hide or show element(s) with a sliding motion depending on the element's current state.
+
+For all of the above elements, you can pass several optional parameters. You'll commonly pass the effect duration in milliseconds. For example, .fadeIn(1000)  will cause an element to fade in over the course of 1000 milliseconds (1 second). The higher the number, the slower the effect. Alternatively, the strings 'fast'  and 'slow'  can be passed instead of numbers. 'slow'  represents a duration of 600 milliseconds, and 'fast'  represents a duration of 200 milliseconds.
+
+Without any parameters, the effects happen over the default duration of 400 milliseconds.
+
+Content manipulation
+With content-focused jQuery methods, you can change the page text, elements, and attributes. You'd do this when changing content upon a button click, when a user performs a particular action, if something else happens on the page, etc.
+
+.html()  : replace page HTML content
+.text()  : replace page text
+.replaceWith()  : replace element(s) entirely, not just its text or HTML
+.remove()  : remove page elements
+.before()  : insert content before element(s)
+.after()  : insert content after element(s)
+.prepend()  : insert content inside the selected element(s) (after the opening HTML tag)
+.append()  : insert content inside the selected element(s) (before the closing HTML tag)
+.attr()  : set an attribute and its value or simply get its attribute
+.removeAttr()  : remove an attribute, RIP
+.addClass()  : add a new class to element(s) (without replacing its current classes)
+.removeClass()  : remove a class from element(s)
+.css()  : personal fave. Get or set an element's CSS properties, even multiple properties at a time.
+
+DOM traversing
+Sometimes you'll need to modify elements relative to other elements within the DOM. By identifying elements in this way, you can modify elements that are only within other elements, elements that descend from other elements, etc. You have a few methods available to do this:
+
+.find()  : find element(s) within current selection that match parameter
+.parent()  : access direct parent of element(s) or parents if .parents()
+.children()  : access children of element(s)
+
+Size and positioning
+Dimension and position-focused jQuery methods let you adjust the sizing and layout of elements.
+
+.height()  : box height without margin, padding, or border
+.width () : box width without margin, padding or border
+
+If you want to go truly wild with box dimensions and element sizing, there are jQuery methods that consider border, padding, and margin together or separately.
+
+.innerHeight()  : height including padding
+.innerWidth()  : width including padding
+.outerHeight()  : height including padding and border
+.outerWidth()  : width including padding and border
+.outerHeight(true)  : the same method as above, but passing the parameter true includes the margin too.
+.outerWidth(true)  : the same method as above, but passing the parameter true includes the margin too.
+
+Element positioning can be handled with two methods:
+
+.offset()  : set element coordinates relative to the very top-left of the document object
+.position()  : set element coordinates relative to its offset parent, useful for positioning elements within the same DOM element. You'll probably use .offset  more.
